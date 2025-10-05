@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title> <style>
+    /* Neon Gradient Background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 300% 300%;
+      animation: bgMove 6s infinite alternate;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    main {
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .game {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #00ffff;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ffff, inset 0 0 10px #00ffff;
+      transition: all 0.3s ease;
+    }
+
+    .box:hover {
+      background: rgba(0, 255, 255, 0.15);
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00ffff, inset 0 0 20px #00ffff;
+    }
+
+    #reset {
+      margin-top: 25px;
+      padding: 10px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #111;
+      background: #00ffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00ffff;
+      transition: 0.3s;
+    }
+
+    #reset:hover {
+      background: #00e6e6;
+      box-shadow: 0 0 30px #00ffff;
+      transform: scale(1.05);
+    }
+
+    .winner {
+      background: #39ff14 !important;
+      box-shadow: 0 0 25px #39ff14, inset 0 0 15px #39ff14 !important;
+    }
+    #reset {
+  margin-top: 25px;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  background: #00ffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff inset;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#reset:hover {
+  background: #00e6e6;
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #00ffff, 0 0 40px #00ffff inset;
+}
+
+#reset:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 20px #00ffff;
+}
+.msg {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#ms {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff,
+    0 0 80px #00ffff;
+  animation: glow 1.5s infinite alternate;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff, inset 0 0 10px #00ffff;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 10px #00ffff,
+      0 0 20px #00ffff,
+      0 0 30px #00ffff;
+  }
+  to {
+    text-shadow: 
+      0 0 20px #00e6e6,
+      0 0 40px #00ffff,
+      0 0 60px #00ffff;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+<main><div class="msg">
+    <p id="ms"></p>
+</div>
+        <h1>TIC-TAC-TOE</h1>
+        <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+        <button id="reset">Reset Game</button>
+</main>
+   <script src="tic.js"></script>
+</body>
+</html>
